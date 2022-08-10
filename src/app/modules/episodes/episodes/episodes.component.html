@@ -1,0 +1,46 @@
+<h1>Episodes</h1>
+
+<div class = "container">
+    <table mat-table [dataSource]="episodes" class="mat-elevation-z8 table">
+
+        <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef class = "centeredtext"> ID </th>
+        <td mat-cell *matCellDef="let element" class = "centeredtext"> {{element.id}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef class = "centeredtext"> Title </th>
+        <td mat-cell *matCellDef="let element" class = "centeredtext"> {{element.title}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef class = "centeredtext"> Description </th>
+        <td mat-cell *matCellDef="let element" class = "centeredtext"> {{element.description}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="realease day">
+        <th mat-header-cell *matHeaderCellDef class = "centeredtext"> Realease date </th>
+        <td mat-cell *matCellDef="let element" class = "centeredtext">{{element.realeasedate}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="released">
+            <th mat-header-cell *matHeaderCellDef class = "centeredtext"> Realeased </th>
+            <td mat-cell *matCellDef="let element" > {{(element.released == '1') ? 'True' : 'False' }} </td>
+            //'&#10005;' : '&#10003;' 
+            <!--<td mat-cell *matCellDef="let element" class = "centeredtext"> {{element.released}} </td>-->
+        </ng-container>
+
+
+        <ng-container matColumnDef="podcastId">
+            <th mat-header-cell *matHeaderCellDef class = "centeredtext"> PodcastId </th>
+            <td mat-cell *matCellDef="let element" class = "centeredtext"> {{element.podcastId}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        
+    </table>
+    
+</div>

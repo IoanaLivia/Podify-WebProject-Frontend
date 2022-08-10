@@ -1,0 +1,14 @@
+<p class="pad">edit-guest works!</p>
+<form [formGroup] = "editGuestForm" (ngSubmit) = "editGuest()"  class = "register-form">
+    <p class = "label">Id:</p>
+    <input formControlName = "id" placeholder = "Id" type = "text">
+    <p class = "label">Name:</p>
+    <input formControlName = "name" placeholder = "Name" type = "text">
+    <p class = "label">Surname:</p>
+    <input formControlName = "surname" placeholder = "Surname" type = "text">
+    <p class = "label">Description:</p>
+    <input formControlName = "description" placeholder = "Description" type = "text">
+
+    <p></p>
+    <button type = "submit"> Save Changes </button>
+</form>

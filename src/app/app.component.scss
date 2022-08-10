@@ -1,0 +1,46 @@
+#WebsiteTitle {
+    background-color: black;
+    color:white;
+    padding-top: 40px;
+    padding-bottom:40px;
+    text-align: center;
+    font-family: "Leckerli One";
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    text-shadow: .1em .1em 0 #f58b0a;
+    text-transform: uppercase;
+    width:100%;
+    margin:0;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: black;
+  width: 100%; 
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  margin: 0;
+  top:0;
+  position:relative;
+}
+
+.topnav a {
+  color: white;
+  text-align: center;
+  padding: 15px 60px;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: "Leckerli One";
+}
+
+.topnav a:hover {
+  background-color: #181818;
+  color: #b8dfb8;
+}
+
+.topnav a:active {
+  background-color: #181818;
+  color: #333;
+}

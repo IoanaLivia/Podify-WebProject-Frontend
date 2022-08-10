@@ -1,0 +1,16 @@
+<div class="component">
+    <h1 id="login">Login</h1>
+    <h2 id="register">Welcome back to Podify!</h2>
+    <form [formGroup] = "loginForm" (ngSubmit) = "onLogin()"  class = "login-form">
+        <p class = "label">Username:</p>
+        <input formControlName = "email" placeholder = "Username" type = "text">
+        <p class = "label">Password:</p>
+        <input formControlName = "password" placeholder = "Password" type = "password">
+        <button type = "submit"> Login </button>
+        <p></p>
+        <a routerLink = "/register">Do not have an account? Register here.</a>
+    </form>
+
+    <p></p>
+    <button (click) = "onLogout()"> Logout </button>
+</div>
