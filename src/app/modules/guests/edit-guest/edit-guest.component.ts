@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { waitForAsync } from '@angular/core/testing';
 import { FormBuilder, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Guest } from 'src/app/interfaces/guest';
 import { EditGuestService } from 'src/app/services/edit-guest.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -24,6 +24,7 @@ export class EditGuestComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
     private editGuestService: EditGuestService,
+    private router: Router,
     private fb: FormBuilder) { }
 
   ngOnInit(): void {
@@ -38,6 +39,11 @@ export class EditGuestComponent implements OnInit {
 
   public editGuest(): void {
     this.editGuestService.editGuest(this.editGuestForm.value);
+    this.router.navigate([`/guests`]);
+
   }
 
+  goBack(): void {
+    this.router.navigate([`/guests`]);
+  }
 }

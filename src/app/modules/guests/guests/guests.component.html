@@ -1,9 +1,11 @@
 <div class = "pad">
+
+  <h2>{{'New' | mypipe}}</h2>
+  <h2>{{'Always new' | mypipe }} {{'Guests every week'}}</h2>
+
   <p>As an admin, would you like to add a guest?</p><button mat-icon-button (click) = "addGuest()" appMyhoverbtn ><mat-icon>add</mat-icon></button>
 </div>
 
-<h2>{{'Guests' | mypipe}}</h2>
-<h2>{{'Name' | mypipe }} {{'altceva'}}</h2>
 
 <div class = "container">
     <table mat-table [dataSource]="guests" class="mat-elevation-z8 table">

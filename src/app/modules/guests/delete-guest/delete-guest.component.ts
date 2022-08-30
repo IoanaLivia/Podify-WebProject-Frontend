@@ -31,11 +31,11 @@ export class DeleteGuestComponent implements OnInit {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     console.log(this.deleteForm.value);
     if (this.deleteForm.value.deleteValue == 'yes'){
-      this.message = "Action completed. Click here to go back.";
+      this.message = "Action has been completed only if you're logged in as admin.";
       this.guestDeleteService.deleteGuest(id);
     }
     else{
-      this.message = "The guest has not been deleted.";
+      this.message = "The request has not been processed.";
     }
   }
 
